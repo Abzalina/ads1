@@ -24,7 +24,7 @@ public class Menu {
                     case 4:
                         task4();
                     case 5:
-                        //task5();
+                        task5();
                     case 6:
                         //task6();
                     case 7:
@@ -143,5 +143,25 @@ public class Menu {
         System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
 
         repeat(4);
+    }
+    public static void task5(){
+        Scanner scn = new Scanner(System.in);
+        System.out.println("--------------------");
+        System.out.println(problemsList(5));
+        System.out.println("--------------------");
+
+        System.out.println("Enter the number:");
+        int n = scn.nextInt();
+
+        System.out.println("Output:");
+
+        double start_time = System.nanoTime();
+
+        System.out.println(Problems.problem_5(n));
+
+        double end_time = System.nanoTime();
+        System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
+
+        repeat(5);
     }
 }
