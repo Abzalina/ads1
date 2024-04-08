@@ -26,9 +26,9 @@ public class Main {
             case 8:
                 Menu.task8();
             case 9:
-                //Menu.task9();
+                Menu.task9();
             case 10:
-                //Menu.task10();
+                Menu.task10();
         }
 
     }

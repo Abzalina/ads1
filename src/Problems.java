@@ -2,6 +2,12 @@ import  java.util.List;
 public class Problems {
 
     public static int problem_1(int n, List<Integer> l1){
+        /**
+         * Finds the minimum element in the given array.
+         *
+         * @param №arr The array to find the minimum element from.
+         * @return The minimum element in the array.
+         */
         int min = 999999999;
         for (int i = 1; i < n; i++) {
             if (l1.get(i) < min) {
@@ -13,6 +19,12 @@ public class Problems {
     }
 
     public static double problem_2(int n, List<Integer> l2) {
+        /**
+         * Calculates the average of numbers in the array.
+         *
+         * @param № The array containing numbers to calculate the average from.
+         * @return The average of numbers in the array.
+         */
         double average = 0;
 
         for(int i = 0; i < n; i++){
@@ -23,6 +35,12 @@ public class Problems {
     }
 
     public static String problem_3(int n, int i){
+        /**
+         * checking the numbers for prime .
+         *
+         * @param n The number to be checked.
+         * @return True if the number is prime, false if the number is composite.
+         */
         String output1 = "Prime";
         String output2 = "Composite";
 
@@ -63,9 +81,23 @@ public class Problems {
         if (i >= a.length()) return "Yes";
 
         if (Character.isDigit(a.charAt(i))) {
-            return problem_8(a, i + 1); // Если символ в индексе 'i' является цифрой, переходим к следующему символу
+            return problem_8(a, i + 1);
         } else {
-            return "No"; // Если символ в индексе 'i' не является цифрой, возвращаем "No"
+            return "No";
         }
+    }
+
+    public static int problem_9(int n, int k){
+        if(k == 0 || k == n) return 1;
+
+        return problem_9(n-1, k-1) + problem_9(n - 1, k);
+    }
+
+    public static int problem_10(int n, int k){
+        if (k == 0){
+            return n;
+        }
+
+        return problem_10(k, n % k);
     }
 }
