@@ -21,4 +21,25 @@ public class Problems {
 
         return average/n;
     }
+
+    public static String problem_3(int n, int i){
+        String output1 = "Prime";
+        String output2 = "Composite";
+
+        if(n == 0 || n == 1) return output2;
+
+        if(n==i) return output1;
+
+        if (n % i == 0) return output2;
+
+        i++;
+
+        return problem_3(n, i);
+    }
+    public static int problem_4(int n){
+
+        if (n == 0) return 1;
+
+        return n * problem_4(n-1);
+    }
 }

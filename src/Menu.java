@@ -20,9 +20,9 @@ public class Menu {
                     case 2:
                         task2();
                     case 3:
-                        //task3();
+                        task3();
                     case 4:
-                        //task4();
+                        task4();
                     case 5:
                         //task5();
                     case 6:
@@ -88,10 +88,7 @@ public class Menu {
     }
     public static void task2(){
         Scanner scn = new Scanner(System.in);
-        System.out.println("--------------------");
         System.out.println(problemsList(2));
-        System.out.println("--------------------");
-
         System.out.println("Enter the size List:");
 
         int n = scn.nextInt();
@@ -114,5 +111,37 @@ public class Menu {
         System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
 
         repeat(2);
+    }
+
+    public static void task3(){
+        Scanner scn = new Scanner(System.in);
+        System.out.println(problemsList(3));
+
+        System.out.println("Enter the number:");
+        int n = scn.nextInt();
+
+        System.out.println("Output:");
+        double start_time = System.nanoTime();
+        System.out.println(Problems.problem_3(n , 2));
+        double end_time = System.nanoTime();
+        System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
+
+
+        repeat(3);
+    }
+    public static void task4(){
+        Scanner scn = new Scanner(System.in);
+        System.out.println(problemsList(4));
+
+        System.out.println("Enter the number:");
+        int n = scn.nextInt();
+
+        System.out.println("Output:");
+        double start_time = System.nanoTime();
+        System.out.println(Problems.problem_4(n));
+        double end_time = System.nanoTime();
+        System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
+
+        repeat(4);
     }
 }
