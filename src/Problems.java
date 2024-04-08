@@ -51,4 +51,21 @@ public class Problems {
         if (n == 1) return a;
         return problem_6(a*s, n - 1, s);
     }
+
+    public static int[] problem_7(int n, int[] l1, int[] res, int i){
+        if(n == 0) return res;
+        res[i] = l1[n-1];
+        return problem_7(n - 1, l1, res, i + 1);
+    }
+
+    public static String problem_8(String a, int i){
+
+        if (i >= a.length()) return "Yes";
+
+        if (Character.isDigit(a.charAt(i))) {
+            return problem_8(a, i + 1); // Если символ в индексе 'i' является цифрой, переходим к следующему символу
+        } else {
+            return "No"; // Если символ в индексе 'i' не является цифрой, возвращаем "No"
+        }
+    }
 }
