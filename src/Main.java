@@ -12,7 +12,7 @@ public class Main {
             case 1:
                 Menu.task1();
             case 2:
-                //Menu.task2();
+                Menu.task2();
             case 3:
                 //Menu.task3();
             case 4:

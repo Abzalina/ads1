@@ -18,7 +18,7 @@ public class Menu {
                     case 1:
                         task1();
                     case 2:
-                        //task2();
+                        task2();
                     case 3:
                         //task3();
                     case 4:
@@ -86,5 +86,33 @@ public class Menu {
 
         repeat(1);
     }
+    public static void task2(){
+        Scanner scn = new Scanner(System.in);
+        System.out.println("--------------------");
+        System.out.println(problemsList(2));
+        System.out.println("--------------------");
 
+        System.out.println("Enter the size List:");
+
+        int n = scn.nextInt();
+
+        List<Integer> l1 = new ArrayList<>();
+
+        System.out.println("Enter the list:");
+
+        for (int i = 0; i < n; i++) {
+            int k = scn.nextInt();
+            l1.add(i, k);
+        }
+
+        double start_time = System.nanoTime();
+
+        System.out.println(Problems.problem_2(n,l1));
+
+        double end_time = System.nanoTime();
+
+        System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
+
+        repeat(2);
+    }
 }

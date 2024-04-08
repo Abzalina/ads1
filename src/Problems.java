@@ -11,4 +11,14 @@ public class Problems {
         return min;
 
     }
+
+    public static double problem_2(int n, List<Integer> l2) {
+        double average = 0;
+
+        for(int i = 0; i < n; i++){
+            average += l2.get(i);
+        }
+
+        return average/n;
+    }
 }
