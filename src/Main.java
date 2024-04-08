@@ -20,7 +20,7 @@ public class Main {
             case 5:
                 Menu.task5();
             case 6:
-                //Menu.task6();
+                Menu.task6();
             case 7:
                 //Menu.task7();
             case 8:
